@@ -1,4 +1,4 @@
-# Instaclone-native
+# Instaclone-native Setting
 
 1. npm install --global expo-cli
 
@@ -21,3 +21,19 @@
 8. npm i styled-components
 
 9. expo install react-native-appearance
+
+   - 다크모드, 화이트모드 설정 관련
+
+# Welcome / Login / Create New Account
+
+1. 자주쓰는 component들은 components 폴더로 분리
+
+2. CreateAccount.js : 회원가입 시 useRef 사용해서 다음 버튼 눌렀을때 원하는 Input 으로 Focus
+
+3. CreateAccount.js : KeyboardAvoidingView, Platform 을 사용해서 OS 별 Keyboard 와 Input 박스 조절
+
+4. AuthLayout.js : TouchableWithoutFeedback, Keyboard 을 사용해서 Input 박스가 아닌 다른곳을 터치했을때 키보드 사라지도록 함
+
+   - TouchableWithoutFeedback 은 TouchableOpacity 같은 기능인데 클릭하는 애니메이션이 보이지 않음
+
+   - Keyboard 는 말 그대로 Keyboard 제어 관련 함수들이 있음
