@@ -37,3 +37,23 @@
    - TouchableWithoutFeedback 은 TouchableOpacity 같은 기능인데 클릭하는 애니메이션이 보이지 않음
 
    - Keyboard 는 말 그대로 Keyboard 제어 관련 함수들이 있음
+
+5. AuthShared.js : 자주쓰는 Input 박스를 따로 빼놓음
+
+6. AuthLayout.js 속에 KeyboardAvoidingView 를 넣음
+
+7. npm install react-hook-form
+
+   - register, handleSubmit, setValue 를 사용하여 데이터 전송
+
+   - useEffect 에 register 을 등록해서 Input 박스 유효성 검사
+
+   - test, test(), () => test() 의 차이 구분하기
+
+8. npm install @apollo/client graphql
+
+   - apollo.js : client 만들기
+
+   - @apollo/client 의 makeVar() 와 useReactiveVar() 를 사용하여 로그인 상태 관리
+
+9. npm install @react-navigation/bottom-tabs
