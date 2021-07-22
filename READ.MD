@@ -57,3 +57,5 @@
    - @apollo/client 의 makeVar() 와 useReactiveVar() 를 사용하여 로그인 상태 관리
 
 9. npm install @react-navigation/bottom-tabs
+
+10. navigation 과 route: { params } 를 이용하여 화면끼리 데이터 통신
