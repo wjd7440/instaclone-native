@@ -59,3 +59,21 @@
 9. npm install @react-navigation/bottom-tabs
 
 10. navigation 과 route: { params } 를 이용하여 화면끼리 데이터 통신
+
+11. expo install @react-native-async-storage/async-storage
+
+- AsyncStorage.multiSet() 을 사용하여 토큰정보와 로그인정보 저장
+
+12. Login Process ( apollo.js -> App.js -> Login.js )
+
+- apollo.js 에 makeVar를 통해 서버 변수 생성 ( isLoggedInVar, tokenVar )
+
+- apollo.js 에 logUserIn 함수를 생성, 이 함수는 토큰을 받아서 AsyncStorage 에 저장하는 기능을 함
+
+- App.js 에서 useReactiveVar()로 apollo.js 의 변수 isLoggedInVar 를 체크한 후, true / false 별 Nav 선택
+
+- Login.js 에서 apollo.js 의 logUserIn 함수를 호출, Login Mutation 이 완료 되면 logUserIn 함수로 토큰을 전달
+
+- logUserIn 함수는 전달받은 토큰값으로 AsyncStorage 에 토큰값을 넣어주고, isLoggendInVar를 true, tokenVar를 토큰값 으로 변경
+
+- 어플이 다시 실행될때 token 을 preload
