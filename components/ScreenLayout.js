@@ -1,7 +1,7 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { ActivityIndicator, View } from "react-native";
 
-export default function Profile() {
+export default function ScreenLayout({ loading, children }) {
   return (
     <View
       style={{
@@ -11,7 +11,7 @@ export default function Profile() {
         justifyContent: "center",
       }}
     >
-      <Text style={{ color: "white" }}>Someones Profile</Text>
+      {loading ? <ActivityIndicator color="white" /> : children}
     </View>
   );
 }
