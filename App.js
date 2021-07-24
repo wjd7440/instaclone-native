@@ -14,7 +14,6 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const onFinish = () => setLoading(false);
   const isLoggedIn = useReactiveVar(isLoggedInVar);
-  console.log(isLoggedIn);
 
   const preloadAssets = () => {
     const fontToLoad = [Ionicons.font];

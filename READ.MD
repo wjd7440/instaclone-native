@@ -64,7 +64,7 @@
 
 - AsyncStorage.multiSet() 을 사용하여 토큰정보와 로그인정보 저장
 
-12. Login Process ( apollo.js -> App.js -> Login.js )
+12. Login Process ( App.js -> apollo.js -> Login.js )
 
 - apollo.js 에 makeVar를 통해 서버 변수 생성 ( isLoggedInVar, tokenVar )
 
@@ -74,6 +74,6 @@
 
 - Login.js 에서 apollo.js 의 logUserIn 함수를 호출, Login Mutation 이 완료 되면 logUserIn 함수로 토큰을 전달
 
-- logUserIn 함수는 전달받은 토큰값으로 AsyncStorage 에 토큰값을 넣어주고, isLoggendInVar를 true, tokenVar를 토큰값 으로 변경
+- logUserIn 함수는 전달받은 토큰값으로 AsyncStorage 에 토큰값을 넣어주고, isLoggendInVar를 true, tokenVar를 토큰값 으로 변경, isLoggendInVar 와 tokenVar 의 값이 변경되며 LoggedInNav 로 리랜더링
 
-- 어플이 다시 실행될때 token 을 preload
+- 어플이 다시 실행될때 AsyncStorage.getItem("token") 을 통해 token 여부 검사 후, 있을 경우 isLoggedInVar 와 tokenVar 값이 변경되며 LoggedInNav 로 리랜더링
